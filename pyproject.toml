@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyberagent"
+version = "0.1.0"
+description = "Authorized recon engine — scope file bounds every probe, findings become Bridge objectives — pure Python, zero dependencies"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{name = "Numsalam (NUMAWARE)"}]
+keywords = ["recon", "security", "authorization", "port-scanning", "numaware"]
+
+[project.scripts]
+cyberagent = "cyberagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cyberagent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

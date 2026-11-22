@@ -1,0 +1,16 @@
+# CYBERAGENT scope file — the authorization contract.
+#
+# The scanner is incapable of touching anything not listed here.
+# Every entry must say WHY it is authorized. Expired entries go inactive.
+#
+#   cyberagent scope examples/scope.yaml
+#   cyberagent scan  examples/scope.yaml
+
+scope:
+  - host: 127.0.0.1
+    reason: local development services on my own machine
+    ports:
+      - 22
+      - 8000
+    owner: numsalam
+    expires: 2027-12-31
